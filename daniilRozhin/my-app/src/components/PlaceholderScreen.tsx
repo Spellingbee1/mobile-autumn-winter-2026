@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+type Props = {
+  title: string;
+};
+
+export default function PlaceholderScreen({ title }: Props) {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>{title}</Text>
     </View>
   );
 }
@@ -16,5 +18,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: '600',
+    color: '#111',
   },
 });
